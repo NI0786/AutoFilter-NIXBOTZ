@@ -121,10 +121,10 @@ HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # ɢɪvᴇ wʜo cʜᴀ
 
 #------------------------------ sᴇcoɴᴅ vᴇʀɪғʏ --------------------------
 
-2ND_VERIFY_SHORTNER = bool(environ.get('2ND_VERIFY_SHORTNER', False)) # sᴇᴛ True ᴏʀ False
-2ND_VERIFY_SHORTLINK_URL = environ.get('2ND_VERIFY_SHORTLINK_URL', '') 
+SND_VERIFY_SHORTNER = bool(environ.get('SND_VERIFY_SHORTNER', False)) # sᴇᴛ True ᴏʀ False
+SND_VERIFY_SHORTLINK_URL = environ.get('SND_VERIFY_SHORTLINK_URL', '') 
 
-2ND_VERIFY_SHORTLINK_API = environ.get('2ND_VERIFY_SHORTLINK_API', '') 
+SND_VERIFY_SHORTLINK_API = environ.get('SND_VERIFY_SHORTLINK_API', '') 
 
 #--------------------------------- oᴛʜᴇʀ --------------------------------
 
