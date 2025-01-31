@@ -4,7 +4,7 @@
 
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK, LOG_CHANNEL, TUTORIAL, GRP_LNK, CHNL_LNK, CUSTOM_FILE_CAPTION, AUTH_USERS, VERIFY_SHORTLINK_URL, VERIFY_SHORTLINK_API, 2ND_VERIFY_SHORTNER, 2ND_VERIFY_SHORTLINK_URL, 2ND_VERIFY_SHORTLINK_API
+from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK, LOG_CHANNEL, TUTORIAL, GRP_LNK, CHNL_LNK, CUSTOM_FILE_CAPTION, AUTH_USERS, VERIFY_SHORTLINK_URL, VERIFY_SHORTLINK_API, SND_VERIFY_SHORTNER, SND_VERIFY_SHORTLINK_URL, SND_VERIFY_SHORTLINK_API
 from imdb import Cinemagoer 
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
@@ -579,8 +579,8 @@ async def get_token(bot, userid, link):
     TOKENS[user.id] = {token: False}
     link = f"{link}verify-{user.id}-{token}"
     shortened_verify_url = await get_verify_shorted_link(link, VERIFY_SHORTLINK_URL, VERIFY_SHORTLINK_API)
-    if 2ND_VERIFY_SHORTNER == True:
-        snd_link = await get_verify_shorted_link(shortened_verify_url, 2!2ND_VERIFY_SHORTLINK_URL, 2ND_VERIFY_SHORTLINK_API)
+    if SND_VERIFY_SHORTNER == True:
+        snd_link = await get_verify_shorted_link(shortened_verify_url, SND_VERIFY_SHORTLINK_URL, SND_VERIFY_SHORTLINK_API)
         return str(snd_link)
     else:
         return str(shortened_verify_url)
