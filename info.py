@@ -19,8 +19,8 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 #------------------------- ʙoᴛ ɪɴғoʀᴍᴀᴛɪᴏɴ --------------------------
 
 SESSION = environ.get('SESSION', 'NIXBOTZ')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '25061703'))
+API_HASH = environ.get('API_HASH', '744a017a9c53f3ab489ea0bfa0ffce3f')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 #--------------------------- ɪᴍᴀɢᴇs ʟɪɴᴋ -----------------------------
@@ -57,29 +57,29 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'IM_NISHANTT') # owɴᴇʀ ᴜs�
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6899946963').split()]
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ wʜᴇʀᴇ ʏoᴜ ᴜᴘʟoᴀᴅ ʏoᴜʀ ꜰɪʟᴇꜱ ᴛʜᴇɴ, ʙᴏᴛ ᴀᴜᴛoᴍᴀᴛɪcᴀʟʟʏ sᴀvᴇ ɪᴛ ɪɴ ᴅᴀᴛᴀʙᴀsᴇ. ɪᴛ ɪs ᴀʟso ᴋɴowɴ ᴀs ꜰɪʟᴇ cʜᴀɴɴᴇʟ.
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002319064428').split()]
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ wʜᴇʀᴇ ʙᴏᴛ sᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇs ɪꜰ ɴᴇw ᴜsᴇʀ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴏʀ ʙᴏᴛ sᴇɴᴅ ꜰɪʟᴇꜱ ᴀɴʏ ᴜsᴇʀ.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002377076025'))
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ wʜᴇʀᴇ ʙᴏᴛ oɴʟʏ sᴇɴᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴇꜱꜱᴀɢᴇs 
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '')) 
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002377076025')) 
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ wʜᴇʀᴇ ʙᴏᴛ ᴅᴇʟᴇᴛᴇ ɪɴᴅᴇx ꜰɪʟᴇ, ғoʀwᴀʀᴅ wʜo ꜰɪʟᴇ ɪɴ ᴛʜᴇ cʜᴀɴɴᴇʟ ғʀoᴍ ꜰɪʟᴇ cʜᴀɴɴᴇʟ wʜɪcʜ ʏoᴜ wᴀɴᴛ ᴛo ᴅᴇʟᴇᴛᴇ ᴛʜᴇɴ, ʙᴏᴛ ᴀᴜᴛoᴍᴀᴛɪcᴀʟʟʏ ᴅᴇʟᴇᴛᴇ ᴛʜᴀᴛ ꜰɪʟᴇ ғʀoᴍ ᴅᴀᴛᴀʙᴀsᴇ. 
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]  
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002264438255').split()]  
 
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6899946963').split()]
 
 # ɢɪvᴇ ʏoᴜʀ ғoʀcᴇ sᴜʙscʀɪʙᴇ cʜᴀɴɴᴇʟ ɪᴅ ᴇʟsᴇ ʟᴇᴀvᴇ ɪᴛ ʙʟᴀɴᴋ.
-auth_channel = environ.get('AUTH_CHANNEL', '')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002386346176')
 
 # ɢɪvᴇ sᴜᴘᴘoʀᴛ cʜᴀɴɴᴇʟ ɪᴅ ʙᴏᴛ ɴᴏᴛ sᴇɴᴅ ꜰɪʟᴇ ʜᴇʀᴇ ʙᴇcᴀᴜsᴇ ᴛʜɪs ɪs sᴜᴘᴘoʀᴛ cʜᴀɴɴᴇʟ.
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '') 
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002386346176') 
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ ғoʀ ɪꜰ ᴜsᴇʀ ʀᴇQᴜᴇsᴛ ꜰɪʟᴇ wɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ oʀ ʜᴀsʜᴛᴀɢ ʟɪᴋᴇ - /request oʀ #request
-reqst_channel = environ.get('REQST_CHANNEL_ID', '') 
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-4554257154') 
 
 # ɢɪvᴇ wʜo cʜᴀɴɴᴇʟ ɪᴅ ғoʀ /batch ᴄᴏᴍᴍᴀɴᴅ ꜰɪʟᴇ sᴛoʀᴇ
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
@@ -98,7 +98,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/NIXBOTZ_Support')
 
 #------------------------- ᴍoɴɢoᴅʙ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ --------------------------------------------
 
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://bipinmfp07:OmodwqrRcvV6lrV4@cluster0.2t7so.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
@@ -162,7 +162,7 @@ QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160
 
 #----------------------- ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ ----------------------
 
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # sᴇᴛ True ᴏʀ False
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # sᴇᴛ True ᴏʀ False
                                 # sᴇᴛ sᴛʀᴇᴀᴍ ᴍoᴅᴇ "True" ᴛʜᴇɴ, ᴍᴜsᴛ ғɪʟʟ ᴜʀʟ !!                  
 MULTI_CLIENT = False                        
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
