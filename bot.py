@@ -14,17 +14,9 @@ import logging.config
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
-logging.getLogger("imdbpy").setLevel(logging.ERROR)
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-logging.getLogger("aiohttp").setLevel(logging.ERROR)
-logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+logging.getLogger("cinemagoer").setLevel(logging.ERROR)
 
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
-from pyrogram import idle
+from pyrogram import Client, idle
 from database.users_chats_db import db
 from info import *
 from utils import temp
