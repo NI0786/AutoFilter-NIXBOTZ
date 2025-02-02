@@ -36,12 +36,6 @@ CODE = (environ.get('CODE', 'https://envs.sh/fRg.png'))
 
 REACTIONS = ["🦋", "🤝", "😇", "🤗", "😍", "😎",  "👍", "🌚", "🎅", "😁", "😐", "🥰", "🤩", "😈", "😱", "🤣", "😘", "👏", "😛", "🎉", "⚡️", "🫡", "🤓", "🏆", "🔥", "🤭", "🆒", "👻"] # ᴅoɴ'ᴛ ᴀᴅᴅ ᴀɴʏ ᴇᴍojɪ ʙᴇcᴀᴜsᴇ ᴛɢ ɴᴏᴛ sᴜᴘᴘoʀᴛ ᴀʟʟ ᴇᴍojɪ
 
-#-------------------------- ʀᴇғᴇʀᴀʟ sᴇᴛᴛɪɴɢs -------------------------
-
-REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # ɴᴜᴍʙᴇʀ ᴏꜰ ʀᴇғᴇʀᴀʟ coᴜɴᴛ
-REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1 week') 
-OWNER_USERNAME = environ.get('OWNER_USERNAME', 'IM_NISHANTT') # owɴᴇʀ ᴜsᴇʀɴᴀᴍᴇ wɪᴛʜoᴜᴛ @ 
-
 #-------------------------------- ɪᴅ -----------------------------------
 
 # 📌 ɴoᴛᴇ: ɢɪvᴇ ʙᴇʟow vᴀʀɪᴀʙʟᴇs wʜo cʜᴀɴɴᴇʟs ɪᴅ ᴀᴅᴅ ɪɴ ᴛʜᴇ cʜᴀɴɴᴇʟ, ʙᴏᴛ ᴍᴜsᴛ ᴀᴅᴍɪɴ wɪᴛʜ ꜰᴜʟʟ sᴜᴘᴘoʀᴛ
@@ -97,7 +91,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
 #---------------------------- sʜᴏʀᴛʟɪɴᴋ ---------------------------
 
-SHORTLINK_MODE = is_enabled((environ.get('SHORTLINK_MODE', 'False')), False) # sᴇᴛ True ᴏʀ False
+SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False)) # sᴇᴛ True ᴏʀ False
 SHORTLINK_API = environ.get('SHORTLINK_API', '') # sᴇᴛ sʜᴏʀᴛʟɪɴᴋ ᴍoᴅᴇ "True" ᴛʜᴇɴ, ᴍᴜsᴛ ғɪʟʟ ᴛʜɪs vᴀʀɪᴀʙʟᴇ !!    
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')  # sᴇᴛ sʜᴏʀᴛʟɪɴᴋ ᴍoᴅᴇ "True" ᴛʜᴇɴ, ᴍᴜsᴛ ᴀʟso ғɪʟʟ ᴛʜɪs vᴀʀɪᴀʙʟᴇ !!    
 
