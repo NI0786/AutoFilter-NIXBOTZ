@@ -28,7 +28,7 @@ from info import *
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from database.users_chats_db import db
-from database.refer_db import referdb
+from database.reffer_db import referdb
 from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
 from database.filters_mdb import (del_all, find_filter, get_filters,)
 from database.gfilters_mdb import (find_gfilter, get_gfilters, del_allg)
