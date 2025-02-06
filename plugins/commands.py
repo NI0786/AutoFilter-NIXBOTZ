@@ -18,11 +18,11 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 from plugins.helper.utils import *
 from database.topdb import NITopDB
-from database.nixbotz_referdb import nixbotz_referdb
+from database.reffer_db import referdb
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
 from info import *
-from utils import get_settings, get_size, wish(), is_req_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial
+from utils import get_settings, get_size, is_req_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial
 from database.connections_mdb import active_connection
 logger = logging.getLogger(__name__)
 movie_series_db = NITopDB(DATABASE_URI)
