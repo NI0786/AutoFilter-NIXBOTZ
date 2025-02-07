@@ -11,6 +11,13 @@ from os import environ
 from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
+def is_enabled(value, default):
+    if value.lower() in ["true", "yes", "1", "enable", "y"]:
+        return True
+    elif value.lower() in ["false", "no", "0", "disable", "n"]:
+        return False
+    else:
+        return default
 
 
 #------------------------- ʙoᴛ ɪɴғoʀᴍᴀᴛɪᴏɴ --------------------------
@@ -109,7 +116,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
 #---------------------------- sʜᴏʀᴛʟɪɴᴋ ---------------------------
 
-SHORTLINK_MODE = bool((environ.get('SHORTLINK_MODE', 'False')), False) # sᴇᴛ True ᴏʀ False
+SHORTLINK_MODE = is_enabled((environ.get('SHORTLINK_MODE', 'False')), False) # sᴇᴛ True ᴏʀ False
 SHORTLINK_API = environ.get('SHORTLINK_API', '') 
 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')  
@@ -118,7 +125,7 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')  # ɢɪvᴇ wʜo cʜᴀɴɴ�
 
 #------------------------------- vᴇʀɪғʏ ---------------------------
 
-VERIFY = bool(environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
+VERIFY = is_enabled(environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
 
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', '') 
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '')
@@ -127,14 +134,14 @@ HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # ɢɪvᴇ wʜo cʜᴀ
 
 #------------------------------ sᴇcoɴᴅ vᴇʀɪғʏ ----------------------
 
-SND_VERIFY = bool(environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+SND_VERIFY = is_enabled(environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 SND_VERIFY_SHORTLINK_URL = environ.get('SND_VERIFY_SHORTLINK_URL', '') 
 SND_VERIFY_SHORTLINK_API = environ.get('SND_VERIFY_SHORTLINK_API', '') 
 
 #------------------------------ ᴛʜɪʀᴅ vᴇʀɪғʏ --------------------------
 
-THRD_VERIFY = bool(environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+THRD_VERIFY = is_enabled(environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 THRD_VERIFY_SHORTLINK_URL = environ.get('THRD_VERIFY_SHORTLINK_URL', '') 
 THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '') 
@@ -142,30 +149,30 @@ THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '')
 #--------------------------------- oᴛʜᴇʀ ------------------------------
 
 MAX_B_TN = environ.get("MAX_B_TN", "7")
-MAX_BTN = bool((environ.get('MAX_BTN', "True")), True)
+MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+IS_TUTORIAL = is_enabled(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '…👻')
-P_TTI_SHOW_OFF = bool((environ.get('P_TTI_SHOW_OFF', "False")), False)
-AUTO_FFILTER = bool((environ.get('AUTO_FFILTER', "True")), True)
-AUTO_DELETE = bool((environ.get('AUTO_DELETE', "True")), True)
-NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False)) # "True" ɪꜰ ʏoᴜ want ɴo ʏoᴜ ʀᴇsᴜʟᴛs ᴍᴇꜱꜱᴀɢᴇs ɪɴ ʟoɢ cʜᴀɴɴᴇʟ ᴇʟsᴇ "False"
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
+AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
+AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
+NO_RESULTS_MSG = is_enabled(environ.get("NO_RESULTS_MSG", False)) # "True" ɪꜰ ʏoᴜ want ɴo ʏoᴜ ʀᴇsᴜʟᴛs ᴍᴇꜱꜱᴀɢᴇs ɪɴ ʟoɢ cʜᴀɴɴᴇʟ ᴇʟsᴇ "False"
 
-BUTTON = bool((environ.get('BUTTON', "True")), True)
-IMDB = bool((environ.get('IMDB', "False")), False)
+BUTTON = is_enabled((environ.get('BUTTON', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), False)
 CACHE_TIME = int(environ.get('CACHE_TIME', 1200))
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 WELCOME_TEXT = environ.get("WELCOME_TEXT", f"{script.WELCOME_TXT}")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
-LONG_IMDB_DESCRIPTION = bool(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
+LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 MELCOW_NEW_USERS = bool((environ.get('MELCOW_NEW_USERS', "True")), True)
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PROTECT_CONTENT = bool((environ.get('PROTECT_CONTENT', "True")), True)
-PUBLIC_FILE_STORE = bool((environ.get('PUBLIC_FILE_STORE', "True")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", "", "bengali", ""]
 
@@ -177,7 +184,7 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 
 #---------------------- ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ ----------------------
 
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # sᴇᴛ True ᴏʀ False
+STREAM_MODE = is_enabled(environ.get('STREAM_MODE', False)) # sᴇᴛ True ᴏʀ False
                                   
 MULTI_CLIENT = False                        
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
@@ -190,7 +197,7 @@ URL = environ.get("URL", "")
 
 #-------------------------- ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇ ------------------------------
 
-APPROVED = bool(environ.get("APPROVED", False)) # sᴇᴛ True ᴏʀ False
+APPROVED = is_enabled(environ.get("APPROVED", False)) # sᴇᴛ True ᴏʀ False
 
 # ɢɪvᴇ wʜo cʜᴀᴛ ɪᴅ wʜᴇʀᴇ ʏoᴜ wᴀɴᴛ ʙᴏᴛ ᴀᴜᴛoᴍᴀᴛɪcᴀʟʟʏ ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀs.
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
