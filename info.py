@@ -125,7 +125,7 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')  # ɢɪvᴇ wʜo cʜᴀɴɴ�
 
 #------------------------------- vᴇʀɪғʏ ---------------------------
 
-VERIFY = is_enabled(environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
+VERIFY = is_enabled((environ.get('VERIFY', False))) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
 
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', '') 
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '')
