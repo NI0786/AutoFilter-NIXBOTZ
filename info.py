@@ -125,7 +125,7 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')  # ɢɪvᴇ wʜo cʜᴀɴɴ�
 
 #------------------------------- vᴇʀɪғʏ ---------------------------
 
-VERIFY = is_enabled(environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
+VERIFY = is_enabled((environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
 
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', '') 
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '')
@@ -134,14 +134,14 @@ HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # ɢɪvᴇ wʜo cʜᴀ
 
 #------------------------------ sᴇcoɴᴅ vᴇʀɪғʏ ----------------------
 
-SND_VERIFY = is_enabled(environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+SND_VERIFY = is_enabled((environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 SND_VERIFY_SHORTLINK_URL = environ.get('SND_VERIFY_SHORTLINK_URL', '') 
 SND_VERIFY_SHORTLINK_API = environ.get('SND_VERIFY_SHORTLINK_API', '') 
 
 #------------------------------ ᴛʜɪʀᴅ vᴇʀɪғʏ --------------------------
 
-THRD_VERIFY = is_enabled(environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+THRD_VERIFY = is_enabled((environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 THRD_VERIFY_SHORTLINK_URL = environ.get('THRD_VERIFY_SHORTLINK_URL', '') 
 THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '') 
