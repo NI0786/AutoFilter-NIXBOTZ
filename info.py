@@ -116,7 +116,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
 #---------------------------- sʜᴏʀᴛʟɪɴᴋ ---------------------------
 
-SHORTLINK_MODE = is_enabled((environ.get('SHORTLINK_MODE', 'False')), False) # sᴇᴛ True ᴏʀ False
+SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', 'False')), False) # sᴇᴛ True ᴏʀ False
 SHORTLINK_API = environ.get('SHORTLINK_API', '') 
 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')  
@@ -125,7 +125,7 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')  # ɢɪvᴇ wʜo cʜᴀɴɴ�
 
 #------------------------------- vᴇʀɪғʏ ---------------------------
 
-VERIFY = is_enabled((environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
+VERIFY = is_enabled(environ.get('VERIFY', False)) # sᴇᴛ vᴇʀɪғɪcᴀᴛɪoɴ True ᴏʀ False
 
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', '') 
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '')
@@ -134,14 +134,14 @@ HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # ɢɪvᴇ wʜo cʜᴀ
 
 #------------------------------ sᴇcoɴᴅ vᴇʀɪғʏ ----------------------
 
-SND_VERIFY = is_enabled((environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+SND_VERIFY = is_enabled(environ.get('SND_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 SND_VERIFY_SHORTLINK_URL = environ.get('SND_VERIFY_SHORTLINK_URL', '') 
 SND_VERIFY_SHORTLINK_API = environ.get('SND_VERIFY_SHORTLINK_API', '') 
 
 #------------------------------ ᴛʜɪʀᴅ vᴇʀɪғʏ --------------------------
 
-THRD_VERIFY = is_enabled((environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
+THRD_VERIFY = is_enabled(environ.get('THRD_VERIFY', False)) # sᴇᴛ True ᴏʀ False
 
 THRD_VERIFY_SHORTLINK_URL = environ.get('THRD_VERIFY_SHORTLINK_URL', '') 
 THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '') 
@@ -149,9 +149,9 @@ THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '')
 #--------------------------------- oᴛʜᴇʀ ------------------------------
 
 MAX_B_TN = environ.get("MAX_B_TN", "7")
-MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
+MAX_BTN = is_enabled(environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-IS_TUTORIAL = is_enabled(environ.get('IS_TUTORIAL', True))
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '…👻')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
