@@ -165,7 +165,7 @@ INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 MELCOW_NEW_USERS = bool(environ.get('MELCOW_NEW_USERS', True))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', True))
-PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', "True", True))
+PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', True))
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", "", "bengali", ""]
 
