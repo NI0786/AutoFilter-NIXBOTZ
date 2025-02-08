@@ -21,7 +21,7 @@ async def autoapprove(client, message: ChatJoinRequest):
         await client.send_photo(
             message.from_user.id, 
             photo=APPROVED_IMG, 
-            caption=APPROVED_TEXT, 
+            caption=APPROVED_TEXT.format(user, chat)
             reply_markup=markup
         )
 
