@@ -12,7 +12,6 @@ from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
 
-
 #------------------------- ʙoᴛ ɪɴғoʀᴍᴀᴛɪᴏɴ --------------------------
 
 SESSION = environ.get('SESSION', 'NIXBOTZ')
@@ -190,7 +189,7 @@ URL = environ.get("URL", "")
 
 #-------------------------- ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇ ------------------------------
 
-APPROVED = is_enabled(environ.get("APPROVED", False)) # sᴇᴛ True ᴏʀ False
+APPROVED = bool(environ.get("APPROVED", False)) # sᴇᴛ True ᴏʀ False
 
 # ɢɪvᴇ wʜo cʜᴀᴛ ɪᴅ wʜᴇʀᴇ ʏoᴜ wᴀɴᴛ ʙᴏᴛ ᴀᴜᴛoᴍᴀᴛɪcᴀʟʟʏ ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀs.
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
