@@ -116,7 +116,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
 #---------------------------- sʜᴏʀᴛʟɪɴᴋ ---------------------------
 
-SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', False) # sᴇᴛ True ᴏʀ False
+SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', False)) # sᴇᴛ True ᴏʀ False
 SHORTLINK_API = environ.get('SHORTLINK_API', '') 
 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')  
