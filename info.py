@@ -11,13 +11,6 @@ from os import environ
 from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
-def is_enabled(value, default):
-    if value.lower() in ["true", "yes", "1", "enable", "y"]:
-        return True
-    elif value.lower() in ["false", "no", "0", "disable", "n"]:
-        return False
-    else:
-        return default
 
 
 #------------------------- ʙoᴛ ɪɴғoʀᴍᴀᴛɪᴏɴ --------------------------
@@ -149,7 +142,7 @@ THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '')
 #--------------------------------- oᴛʜᴇʀ ------------------------------
 
 MAX_B_TN = environ.get("MAX_B_TN", "7")
-MAX_BTN = boop(environ.get('MAX_BTN', True))
+MAX_BTN = bool(environ.get('MAX_BTN', True))
 PORT = environ.get("PORT", "8080")
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '…👻')
