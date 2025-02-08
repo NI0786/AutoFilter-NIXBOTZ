@@ -116,7 +116,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'NIXFILES')
 
 #---------------------------- sʜᴏʀᴛʟɪɴᴋ ---------------------------
 
-SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', 'False'), False) # sᴇᴛ True ᴏʀ False
+SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', False) # sᴇᴛ True ᴏʀ False
 SHORTLINK_API = environ.get('SHORTLINK_API', '') 
 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')  
@@ -149,29 +149,29 @@ THRD_VERIFY_SHORTLINK_API = environ.get('THRD_VERIFY_SHORTLINK_API', '')
 #--------------------------------- oᴛʜᴇʀ ------------------------------
 
 MAX_B_TN = environ.get("MAX_B_TN", "7")
-MAX_BTN = is_enabled(environ.get('MAX_BTN', "True"), True)
+MAX_BTN = is_enabled(environ.get('MAX_BTN', True))
 PORT = environ.get("PORT", "8080")
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '…👻')
-P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "False"), False)
-AUTO_FFILTER = is_enabled(environ.get('AUTO_FFILTER', "True"), True)
-AUTO_DELETE = is_enabled(environ.get('AUTO_DELETE', "True"), True)
+P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', False))
+AUTO_FFILTER = is_enabled(environ.get('AUTO_FFILTER', True))
+AUTO_DELETE = is_enabled(environ.get('AUTO_DELETE', True))
 NO_RESULTS_MSG = is_enabled(environ.get("NO_RESULTS_MSG", False)) # "True" ɪꜰ ʏoᴜ want ɴo ʏoᴜ ʀᴇsᴜʟᴛs ᴍᴇꜱꜱᴀɢᴇs ɪɴ ʟoɢ cʜᴀɴɴᴇʟ ᴇʟsᴇ "False"
 
-BUTTON = is_enabled(environ.get('BUTTON', "True"), True)
-IMDB = is_enabled(environ.get('IMDB', "False"), False)
+BUTTON = is_enabled(environ.get('BUTTON', True))
+IMDB = is_enabled(environ.get('IMDB', False))
 CACHE_TIME = int(environ.get('CACHE_TIME', 1200))
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 WELCOME_TEXT = environ.get("WELCOME_TEXT", f"{script.WELCOME_TXT}")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
-LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
-SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", "True"), True)
+LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION",  False))
+SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", True))
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-MELCOW_NEW_USERS = bool((environ.get('MELCOW_NEW_USERS', "True")), True)
+MELCOW_NEW_USERS = bool((environ.get('MELCOW_NEW_USERS', True))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', "True"), True)
+PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', True))
 PUBLIC_FILE_STORE = is_enabled(environ.get('PUBLIC_FILE_STORE', "True"), True)
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", "", "bengali", ""]
