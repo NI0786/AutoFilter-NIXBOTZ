@@ -578,7 +578,7 @@ async def get_token(bot, userid, link):
     if SND_VERIFY == True:
         snd_url = await get_verify_shorted_link(verify_url, SND_VERIFY_SHORTLINK_URL, SND_VERIFY_SHORTLINK_API)
         return str(snd_link)
-   elif THRD_VERIFY == True:
+    elif THRD_VERIFY == True:
         thrd_link = await get_verify_shorted_link(snd_url, THRD_VERIFY_SHORTLINK_URL, THRD_VERIFY_SHORTLINK_API)
         return str(thrd_url)
     else:
