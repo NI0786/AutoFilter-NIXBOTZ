@@ -576,11 +576,11 @@ async def get_token(bot, userid, link):
     link = f"{link}verify-{user.id}-{token}"
     verify_url = await get_verify_shorted_link(link, VERIFY_SHORTLINK_URL, VERIFY_SHORTLINK_API)
     if SND_VERIFY == True:
-        2nd_url = await get_verify_shorted_link(verify_url, SND_VERIFY_SHORTLINK_URL, SND_VERIFY_SHORTLINK_API)
-        return str(2nd_link)
+        snd_url = await get_verify_shorted_link(verify_url, SND_VERIFY_SHORTLINK_URL, SND_VERIFY_SHORTLINK_API)
+        return str(snd_link)
    elif THRD_VERIFY == True:
-        3rd_link = await get_verify_shorted_link(2nd_url, THRD_VERIFY_SHORTLINK_URL, THRD_VERIFY_SHORTLINK_API)
-        return str(3rd_url)
+        thrd_link = await get_verify_shorted_link(snd_url, THRD_VERIFY_SHORTLINK_URL, THRD_VERIFY_SHORTLINK_API)
+        return str(thrd_url)
     else:
         return str(verify_url)
 
