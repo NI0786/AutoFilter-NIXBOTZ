@@ -1,9 +1,9 @@
 import jinja2
 from info import *
-from NX.bot import NIBot
-from NX.util.human_readable import humanbytes
-from NX.util.file_properties import get_file_ids
-from NX.server.exceptions import InvalidHash
+from NIXBOTZ.bot import NIBot
+from NIXBOTZ.util.human_readable import humanbytes
+from NIXBOTZ.util.file_properties import get_file_ids
+from NIXBOTZ.server.exceptions import InvalidHash
 import urllib.parse
 import logging
 import aiohttp
