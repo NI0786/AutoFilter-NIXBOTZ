@@ -687,7 +687,8 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                           InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs •', url="https://t.me/NIXBOTZ") 
                        ],[
                           InlineKeyboardButton('• ᴏᴡɴᴇʀ •', url="https://t.me/IM_NISHANTT")
-                    ]]))
+                    ]]
+            ))
                           
     except UserIsBlocked:
         await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
