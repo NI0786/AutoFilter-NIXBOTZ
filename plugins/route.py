@@ -8,7 +8,7 @@ from aiohttp import web
 from aiohttp.http_exceptions import BadStatusLine
 from NIXBOTZ.bot import multi_clients, work_loads, NIBot
 from NIXBOTZ.server.exceptions import FIleNotFound, InvalidHash
-from NIXBOTZ import StartTime, __version__
+from NIXBOTZ.__init__ import StartTime, __version__
 from NIXBOTZ.util.custom_dl import ByteStreamer
 from NIXBOTZ.util.time_format import get_readable_time
 from NIXBOTZ.util.render_template import render_page
