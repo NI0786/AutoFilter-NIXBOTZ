@@ -134,7 +134,7 @@ class Database:
             'fsub_id': "",
             'shortlink': SHORTLINK_URL,
             'shortlink_api': SHORTLINK_API,
-            'is_shortlink': SHORTLINK_MODE,
+            'is_shortlink': IS_SHORTLINK,
             'tutorial': TUTORIAL,
             'is_tutorial': IS_TUTORIAL
         }
