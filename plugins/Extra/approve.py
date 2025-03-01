@@ -7,10 +7,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 @Client.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel))
-async def autoapprove(client, message: ChatJoinRequest):
+async def auto_approve(client, message: ChatJoinRequest):
     if APPROVED == True:
-    chat=message.chat 
-    user=message.from_user 
+    chat = message.chat 
+    user = message.from_user 
     print(f"{user.first_name} Joined") 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
         buttons = [[ 
