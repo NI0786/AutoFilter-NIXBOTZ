@@ -187,13 +187,6 @@ else:
     ON_HEROKU = False
 URL = environ.get("URL", "")  
 
-#-------------------------- ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇ ------------------------------
-
-APPROVED = bool(environ.get("APPROVED", False)) # sᴇᴛ True ᴏʀ False
-
-# ɢɪvᴇ wʜo cʜᴀᴛ ɪᴅ wʜᴇʀᴇ ʏoᴜ wᴀɴᴛ ʙᴏᴛ ᴀᴜᴛoᴍᴀᴛɪcᴀʟʟʏ ᴀᴜᴛo ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀs.
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
-
 #------------------------------ ᴄʀᴇᴅɪᴛ -------------------------------
 
 # ᴄʀᴇᴅɪᴛ - @NIXBOTZ
