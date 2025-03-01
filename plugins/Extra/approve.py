@@ -6,28 +6,16 @@ from info import CHAT_ID, APPROVED, APPROVED_TEXT, APPROVED_IMG, CHNL_LNK
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@Client.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel))
-async def auto_approve(client, message: ChatJoinRequest):
-    if APPROVED == True:
-    chat = message.chat 
-    user = message.from_user 
-    print(f"{user.first_name} Joined") 
-    await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
-        buttons = [[ 
-            InlineKeyboardButton('◉ ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ◉', url=CHNL_LNK)
-            
-        ]]
-        replymarkup = InlineKeyboardMarkup(buttons)
-        await client.send_photo(
-            message.from_user.id, 
-            photo=APPROVED_IMG, 
-            caption=ʜᴇʟʟo {user},\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {chat} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ ᴀɴᴅ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {chat},
-            reply_markup=markup
-        )
-
-
-
-
-# ᴄʀᴇᴅɪᴛ - @NIXBOTZ
-# ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ʀᴇᴍᴏᴠᴇ ᴄʀᴇᴅɪᴛ..
-# ғᴏʀ ᴀɴʏ ᴇʀʀᴏʀ/ᴅᴏᴜʙᴛ ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ oɴ ᴛᴇʟᴇɢʀᴀᴍ - @IM_NISHANTT
+@app.on_chat_join_request(filters.group | filters.channel)
+async def approve(_, m : Message):
+    n = m.chat
+    k = m.from_user
+    try:
+        add_group(m.chat.id)
+        await app.approve_chat_join_request(n.id, k.id)
+        await app.send_message(k.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @VJ_Botz __**".format(m.from_user.mention, m.chat.title))
+        add_user(k.id)
+    except errors.PeerIdInvalid as e:
+        print("user isn't start bot(means group)")
+    except Exception as err:
+        print(str(err))    
