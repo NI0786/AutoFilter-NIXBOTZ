@@ -1,4 +1,3 @@
-from countryinfo import CountryInfo
 from pyrogram import filters, Client 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from Script import script
