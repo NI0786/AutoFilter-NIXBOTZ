@@ -13,14 +13,10 @@ class NIXBot(Client):
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
-            workers=150,
+            workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
-        )
-
-    async def set_self(self):
-        temp.BOT = self
-    
+        )    
     async def iter_messages(
         self,
         chat_id: Union[int, str],
