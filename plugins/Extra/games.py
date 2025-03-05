@@ -62,7 +62,7 @@ async def roll_dice(client, message):
 TRY_YOUR_LUCK = "🎰"
 # EMOJI CONSTANTS
 
-@Client.on_message(filters.command(["luck", "cownd"] CMD))
+@Client.on_message(filters.command(["luck", "cownd"], CMD))
 async def luck_cownd(client, message):
     """ /luck an @animatedluck """
     rep_mesg_id = message.id
