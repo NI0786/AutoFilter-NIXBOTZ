@@ -20,7 +20,7 @@ REPORT_TXT = """@admin, @admins, /report. ғᴏʀ ʀᴇᴘᴏʀᴛ ᴛᴏ ᴀᴅ
 
 CREATOR_REQUIRED = """❗<b>You have To Be The Group Creator To Do That.</b>"""
       
-INPUT_REQUIRED = "❗ Arguments Required ❗   
+INPUT_REQUIRED = """❗ Arguments Required ❗"""
 
 KICKED = """Successfully Kicked {} Members According To The Arguments Provided."""
       
