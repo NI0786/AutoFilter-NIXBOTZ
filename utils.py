@@ -48,7 +48,6 @@ class temp(object):
     BANNED_USERS = []
     BANNED_CHATS = []
     ME = None
-    BOT = None
     SELF = None
     CURRENT=int(os.environ.get("SKIP", 2))
     CANCEL = False
