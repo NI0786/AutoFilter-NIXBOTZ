@@ -3,7 +3,7 @@ import logging
 from info import *
 from pyrogram import Client
 from NIXBOTZ.util.config_parser import TokenParser
-from . import multi_clients, work_loads, NIBot
+from NIXBOTZ.bot import multi_clients, work_loads, NIBot
 
 
 async def initialize_clients():
