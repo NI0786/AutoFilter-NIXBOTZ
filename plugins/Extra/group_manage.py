@@ -6,7 +6,7 @@ from pyrogram import Client, filters, enums
 from plugins.helper.admin_check import admin_check, admin_fliter  
 from plugins.helper.extract import extract_time, extract_user                               
 from pyrogram.types import Message, ChatPermissions
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT_ID, LOG CHANNEL
+from info import ADMINS, SUPPORT_CHAT_ID, LOG CHANNEL
 import asyncio
 from utils import temp 
 from time import time, sleep
